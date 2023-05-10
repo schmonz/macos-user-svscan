@@ -3,7 +3,8 @@ default: none
 none:
 
 svscan:
+	mkdir -p $${HOME}/Library/LaunchAgents
 	cd etc; \
 	for i in com.schmonz.svscan.plist; do \
-		ln -s `pwd`/$${i} $${HOME}/Library/LaunchAgents/$${i} || true; \
+		cp `pwd`/$${i} $${HOME}/Library/LaunchAgents/ || true; \
 	done

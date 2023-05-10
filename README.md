@@ -14,7 +14,10 @@ On macOS, services failed to start with e.g. `opening configfile /Users/schmonz/
 
 ## What I discovered
 
-If I ever get around to digging, I'll tell you.
+1. The root `svscan` is unable to start the user `svscan` until the user has logged in.
+2. The user `svscan` probably was itself started with insufficient filesystem privileges.
+
+This was on a system with FileVault 2 enabled. Maybe in the absence of FileVault things work as I'd expected?
 
 ## What I did instead
 
