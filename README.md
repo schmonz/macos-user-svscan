@@ -23,7 +23,7 @@ On a system without FileVault enabled, things work as I wanted.
 
 1. Stop trying to use `daemontools-run` on macOS when FileVault is enabled.
 2. Configure `launchd` to run `svscan` when I log in.
-3. Make sure `mksh` has Full Disk Access.
+3. Make sure `/opt/pkg/bin/mksh` (the shell that these scripts will run under) has Full Disk Access.
 
 ## What's suboptimal about this
 
